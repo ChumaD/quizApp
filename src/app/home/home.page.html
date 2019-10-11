@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar align="center" color="primary">
+    <ion-title >
+      <img with="300" height="200" src="../../assets/image/quiz.png">
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar align="center" >
+    <ion-button [routerLink]="['/categories']"><ion-icon name="add"></ion-icon>Take a quiz</ion-button>
+    <ion-button [routerLink]="['/profile']"><ion-icon name="person"></ion-icon>User profile</ion-button> 
+    <ion-button  (click)="logout()" [routerLink]="['/results']">Results</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div *ngIf="empty">
+    <h3>You have not taken any quiz yet</h3>
+    <h3>click start to start a new quiz</h3>
+  </di-->
+  <!-- <div align="center">
+   
+  </div> -->
+ 
+ 
+
+</ion-content>

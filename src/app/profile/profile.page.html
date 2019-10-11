@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<img [src]="profilePic" *ngIf="profilePic">
+
+<ion-card *ngFor="let use of used" class="prof">
+    <ion-card-header>
+    <ion-button (click)="takePicture()"><ion-icon name="camera"></ion-icon></ion-button><br>
+    </ion-card-header>
+    <ion-card-content><b><strong>
+      Name:  {{ use.name }}<br>
+      Surname:   {{ use.surname }}<br>
+      Age:    {{ use.age }}<br>
+      Gender:   {{ use.gender }}<br>
+      Email:   {{ use.email }}
+    </strong></b></ion-card-content>
+  </ion-card>
+  <ion-button  (click)="logout()" [routerLink]="['/login']"><ion-icon name="lock"></ion-icon>Logout</ion-button>
+
+
+
+</ion-content>

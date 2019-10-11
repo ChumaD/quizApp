@@ -1,0 +1,23 @@
+
+<ion-header>
+  <ion-toolbar color="primary" align="center">
+      <img with="300" height="200" src="../../assets/image/quiz.png">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3>Categories for the quiz</h3>
+<!-- <div *ngFor="let categ of category">
+<ion-button expand="block"  shape="round" [routerLink]="['/questions']" (click)="setID(Category_key)">
+  {{categ.categories}}
+</ion-button>
+</div> -->
+<div *ngFor="let key of category">
+  <ion-card [routerLink]="['/questions', key.Category_ID]">
+    <ion-card-content>
+      {{key.categories}}
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>

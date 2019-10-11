@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar align="center" color="primary" >
+      <img with="300" height="200" src="../../assets/image/register.jpg">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <form [formGroup]="quizForm"> -->
+
+   <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+   </ion-item>
+      
+   <ion-item>
+    <ion-label position="floating">Surname</ion-label>
+    <ion-input [(ngModel)]="surname"></ion-input>
+   </ion-item>
+  
+   <ion-item>
+    <ion-label position="floating">Age</ion-label>
+    <ion-input [(ngModel)]="age"></ion-input>
+   </ion-item>
+  
+   <ion-list>
+    <ion-radio-group  (ionChange)="getGender($event)">
+      <ion-list-header>
+        <ion-label>Gender</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Male</ion-label>
+        <ion-radio slot="start" value="Male"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Female</ion-label>
+        <ion-radio slot="start" value="Female"></ion-radio>
+      </ion-item>
+      </ion-radio-group>
+   </ion-list>
+
+   <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]="email"></ion-input>
+   </ion-item>
+         
+   <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input [(ngModel)]="password"></ion-input>
+   </ion-item>
+         
+   <ion-button (click)="register()">Register</ion-button>
+
+ <!----/form-->
+      
+</ion-content>

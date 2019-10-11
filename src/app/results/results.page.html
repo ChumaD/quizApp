@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar align="center" color="primary">
+      <img with="300" height="200" src="../../assets/image/quiz.png">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-card *ngFor="let scor of scores">
+{{scor.score}}
+ </ion-card>
+</ion-content>

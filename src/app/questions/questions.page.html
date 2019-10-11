@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar align="center" color="primary">
+      <img with="300" height="200" src="../../assets/image/quiz.png">
+    <ion-title></ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content >
+  <h3>Questions</h3>
+
+<ion-card *ngFor="let quis of Questions" color="tertiary">
+  <ion-card-header>
+    <ion-card-title>
+      {{quis.Question}}
+    </ion-card-title>
+  </ion-card-header>
+<ion-card-content >
+  <ion-list  (ionChange)="Score($event, quis.Question)">
+    <ion-radio-group >
+      <ion-item *ngFor="let Answer of quis.option">
+        <ion-label>{{Answer}}</ion-label>
+        <ion-radio slot="start" value="{{Answer}}"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+</ion-card-content>
+
+</ion-card>
+
+<ion-button (click)="submit()"  shape="round" [routerLink]="['/results']">Submit</ion-button>
+</ion-content>
